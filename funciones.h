@@ -1,6 +1,7 @@
 #ifndef funciones_h
 #define funciones_h
-#define TAM_LINEA 8 //3 bits de linea 2^3 = 8
+#define TAM_LINEA 16 //3 bits de linea 2^3 = 8
+#define NUM_FILAS 8
 int numfallos = 0;
 double tiempoglobal = 0;
 
