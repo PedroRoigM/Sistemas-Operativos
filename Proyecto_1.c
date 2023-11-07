@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM_LINEA 8 //3 bits de linea 2^3 = 8
-
+#include"funciones.h"
 
 //Bus de memoria de 12 bits y usa memoria fisica
 //Caché de 8 lineas con correspondencia directa y 16 bytes por linea
@@ -12,6 +11,9 @@ int main(){
 
 	unsigned char Simul_RAM[4096];
 	//En caso de error hay que hacer un return -1
+	VolcarCACHE(MEMsym);
+
+
 	return 0;
 }
 
