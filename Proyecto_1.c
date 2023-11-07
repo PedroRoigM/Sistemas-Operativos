@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include"funciones.h"
-
 //Bus de memoria de 12 bits y usa memoria fisica
 //Caché de 8 lineas con correspondencia directa y 16 bytes por linea
 //palabra(4 bits), linea(3 bits), etiqueta(5 bits)
