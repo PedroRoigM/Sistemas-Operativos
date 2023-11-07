@@ -6,7 +6,7 @@
 //palabra(4 bits), linea(3 bits), etiqueta(5 bits)
 
 int main(){
-	T_CACHE_LINE MEMsym[16];
+	T_CACHE_LINE MEMsym[NUM_FILAS];
 
 	unsigned char Simul_RAM[4096];
 	//En caso de error hay que hacer un return -1
