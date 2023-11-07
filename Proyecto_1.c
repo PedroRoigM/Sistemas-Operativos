@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<funciones.h>
 #define TAM_LINEA 8 //3 bits de linea 2^3 = 8
 
 
