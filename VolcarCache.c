@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"funciones.h"
 
-void VolcarCACHE(T_CHACHE_LINE *tbl){
+void VolcarCACHE(T_CACHE_LINE *tbl){
 	printf("Hola");
 }

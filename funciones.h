@@ -2,8 +2,7 @@
 #define funciones_h
 #define TAM_LINEA 8 //3 bits de linea 2^3 = 8
 
-double globaltime = 0;
-int numfallos = 0;
+
 typedef struct {
         unsigned char ETQ;
         unsigned char Data[TAM_LINEA];
