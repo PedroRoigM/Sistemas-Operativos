@@ -6,8 +6,8 @@ void VolcarCACHE(T_CACHE_LINE *tbl){
 	for(int i = NUM_FILAS - 1; i >= 0; i--){ 
 
 		printf("ETQ:%X Data ", tbl[i].ETQ);
-		for(int j = TAM_LINEA; j >= 0; j--){
-			printf("%X ", tbl[i].Data[j]);
+		for(int j = TAM_LINEA - 1; j >= 0; j--){
+			printf("%02X ", tbl[i].Data[j]);
 		}
 		printf("\n");
 	}
