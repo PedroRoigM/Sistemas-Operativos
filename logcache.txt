@@ -1,3 +1,26 @@
+T: 1, Fallo de CACHE 1, ADDR 22E ETQ 04 linea 02 palabra 0E bloque 22
+Cargando el bloque 22 en la linea 02
+T: 21, Fallo de CACHE 2, ADDR 434 ETQ 08 linea 03 palabra 04 bloque 43
+Cargando el bloque 43 en la linea 03
+T: 41, Acierto de cache, addr 0430 etq 8 linea 03 dato 78
+T: 42, Fallo de CACHE 3, ADDR 598 ETQ 0B linea 01 palabra 08 bloque 59
+Cargando el bloque 59 en la linea 01
+T: 62, Acierto de cache, addr 0595 etq B linea 01 dato 62
+T: 63, Acierto de cache, addr 0596 etq B linea 01 dato 75
+T: 64, Fallo de CACHE 4, ADDR C77 ETQ 18 linea 07 palabra 07 bloque C7
+Cargando el bloque C7 en la linea 07
+T: 84, Fallo de CACHE 5, ADDR B09 ETQ 16 linea 00 palabra 09 bloque B0
+Cargando el bloque B0 en la linea 00
+T: 104, Fallo de CACHE 6, ADDR 63A ETQ 0C linea 03 palabra 0A bloque 63
+Cargando el bloque 63 en la linea 03
+T: 124, Fallo de CACHE 7, ADDR FC4 ETQ 1F linea 04 palabra 04 bloque FC
+Cargando el bloque FC en la linea 04
+T: 144, Fallo de CACHE 8, ADDR 81C ETQ 10 linea 01 palabra 0C bloque 81
+Cargando el bloque 81 en la linea 01
+T: 164, Acierto de cache, addr 0FC0 etq 1F linea 04 dato 66
+T: 165, Fallo de CACHE 9, ADDR 62 ETQ 00 linea 06 palabra 02 bloque 06
+Cargando el bloque 06 en la linea 06
+T: 185, Acierto de cache, addr 0FC6 etq 1F linea 04 dato 6E
 Contenido de la Cache:
 ETQ:18 Data 6D 61 74 20 6F 6D 65 6E 20 6D 61 69 20 6D 75 63 
 ETQ:0 Data 64 61 20 6D 65 75 71 20 3F 74 65 64 75 6C 65 20 
@@ -7,3 +30,8 @@ ETQ:C Data 20 65 75 71 65 6E 20 6D 75 69 6C 69 73 6E 6F 63
 ETQ:4 Data 73 6F 6E 20 6D 65 75 71 20 2C 73 69 72 65 70 65 
 ETQ:10 Data 43 20 74 65 20 2E 6C 70 20 6D 75 6E 75 62 69 72 
 ETQ:16 Data 65 64 69 76 20 75 74 61 6E 65 73 20 6E 69 20 6F 
+Error al abrir el archivo.
+Numero total de accesos: 14
+Numero de fallos: 9
+Tiempo medio de acceso: 13.29
+Texto leido: osx bu tn efln
