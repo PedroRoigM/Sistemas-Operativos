@@ -14,7 +14,7 @@ int main() {
     unsigned int numaccesos = 0;
     FILE *file;
     char line[5];  // Para leer las direcciones de memoria
-    char texto[MAX_TEXTO] = {0};  // Para almacenar el texto leído de la caché
+    char texto[TAM_RAM] = {0};  // Para almacenar el texto leído de la caché
     int texto_idx = 0;
     // Inicializa la cache
     LimpiarCACHE(cache);
@@ -40,7 +40,7 @@ int main() {
 
         sscanf(line, "%x", &addr);
         ParsearDireccion(addr, &ETQ, &palabra, &linea, &bloque);
-
+		
         numaccesos++;
 
         // Comprobacion de cache
@@ -55,7 +55,7 @@ int main() {
             // Fallo de caché
             TratarFallo(cache, Simul_RAM, ETQ, linea, bloque);
             numfallos++;
-            printf("T: %u, Fallo de CACHE %d, ADDR %04X ETQ %X linea %02X palabra %02X bloque %02X\n", 
+            printf("T: %u, Fallo de CACHE %d, ADDR %02X ETQ %02X linea %02X palabra %02X bloque %02X\n", 
                    time, numfallos, addr, ETQ, linea, palabra, bloque);
             printf("Cargando el bloque %02X en la linea %02X\n", bloque, linea);
             time += 20;
