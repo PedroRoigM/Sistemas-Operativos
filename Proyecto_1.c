@@ -46,20 +46,29 @@ int main() {
         // Comprobacion de cache
         if (cache[linea].ETQ == ETQ) {
             // Acierto de cache
-            unsigned char dato = cache[linea].Data[palabra];
-            texto[texto_idx++] = dato; 
+            
+			unsigned char dato = cache[linea].Data[palabra];
+			texto[texto_idx++] = dato;
             printf("T: %u, Acierto de cache, addr %04X etq %X linea %02X dato %02X\n", 
                    time, addr, ETQ, linea, dato);
             time += 1;
         } else {
             // Fallo de caché
             TratarFallo(cache, Simul_RAM, ETQ, linea, bloque);
+			
+			unsigned char dato = cache[linea].Data[palabra];
+			texto[texto_idx++] = dato;
             numfallos++;
+			
             printf("T: %u, Fallo de CACHE %d, ADDR %02X ETQ %02X linea %02X palabra %02X bloque %02X\n", 
                    time, numfallos, addr, ETQ, linea, palabra, bloque);
             printf("Cargando el bloque %02X en la linea %02X\n", bloque, linea);
             time += 20;
         }
+		
+		
+		
+		
         sleep(1); // Simulación de delay
     }
 
@@ -72,7 +81,7 @@ int main() {
     printf("Numero total de accesos: %u\n", numaccesos);
     printf("Numero de fallos: %u\n", numfallos);
     printf("Tiempo medio de acceso: %.2f\n", (double)time / numaccesos);
-    printf("Texto leido de la cache: %s\n", texto);
+    printf("Texto leido: %s\n", texto);
     // Guardar el contenido final de la cache en un archivo
     VolcarCACHE(cache);
 
