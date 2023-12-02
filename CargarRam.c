@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"funciones.h"
-
+//carga la ram en simulram.
 int CargarRam(unsigned char *Simul_RAM) {
     FILE *archivo = fopen("CONTENTS_RAM.bin", "rb");
     if (archivo == NULL) {

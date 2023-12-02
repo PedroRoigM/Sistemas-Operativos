@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include"funciones.h"
-
+//inicializa la cache recorriendo las filas y las lineas.
 void LimpiarCACHE(T_CACHE_LINE tbl[]){
 	for (int i = 0; i < NUM_FILAS; i++) {
         tbl[i].ETQ = 0xFF; 

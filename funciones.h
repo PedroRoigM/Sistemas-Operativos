@@ -18,7 +18,6 @@ void VolcarCACHE(T_CACHE_LINE *tbl);
 void ParsearDireccion(unsigned int addr, int *ETQ, int *palabra, int *linea, int *bloque);
 void TratarFallo(T_CACHE_LINE *tbl, char *MRAM, int ETQ, int linea, int bloque);
 int CargarRam(unsigned char *Simul_RAM);
-int* tami();
 void MostrarCache(T_CACHE_LINE *cache);
 
 #endif
