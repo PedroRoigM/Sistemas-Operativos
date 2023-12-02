@@ -17,7 +17,6 @@ void LimpiarCACHE(T_CACHE_LINE tbl[]);
 void VolcarCACHE(T_CACHE_LINE *tbl);
 void ParsearDireccion(unsigned int addr, int *ETQ, int *palabra, int *linea, int *bloque);
 void TratarFallo(T_CACHE_LINE *tbl, char *MRAM, int ETQ, int linea, int bloque);
-int CargarRam(unsigned char *Simul_RAM);
 void MostrarCache(T_CACHE_LINE *cache);
 
 #endif
