@@ -14,20 +14,5 @@ void MostrarCache(T_CACHE_LINE *cache) {
         }
         printf("\n");
     }
-    FILE *archivo = fopen("logcache.txt", "w");
-    if (archivo != NULL) {
-        fprintf(archivo, "Contenido de la Cache:\n");
-
-        for (int i = NUM_FILAS - 1; i >= 0; i--) {
-            fprintf(archivo, "ETQ:%X Data ", cache[i].ETQ);
-            for (int j = TAM_LINEA - 1; j >= 0; j--) {
-                fprintf(archivo, "%02X ", cache[i].Data[j]);
-            }
-            fprintf(archivo, "\n");
-        }
-
-        fclose(archivo);
-    } else {
-        printf("Error al abrir el archivo.\n");
-    }
+    
 }
