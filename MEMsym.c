@@ -9,7 +9,7 @@
 int main() {
     T_CACHE_LINE cache[NUM_FILAS];
     unsigned char Simul_RAM[4096];
-    unsigned int time = 1;
+    unsigned int globaltime = 0; //time
     unsigned int numfallos = 0;
     unsigned int numaccesos = 0;
     FILE *file;
@@ -50,8 +50,8 @@ int main() {
 			unsigned char dato = cache[linea].Data[palabra];
 			texto[texto_idx++] = dato;
             printf("T: %u, Acierto de cache, addr %04X etq %X linea %02X dato %02X\n", 
-                   time, addr, ETQ, linea, dato);
-            time += 1;
+                   globaltime, addr, ETQ, linea, dato);
+            globaltime += 1;
         } else {
             // Fallo de caché
             TratarFallo(cache, Simul_RAM, ETQ, linea, bloque);
@@ -61,9 +61,9 @@ int main() {
             numfallos++;
 			
             printf("T: %u, Fallo de CACHE %d, ADDR %02X ETQ %02X linea %02X palabra %02X bloque %02X\n", 
-                   time, numfallos, addr, ETQ, linea, palabra, bloque);
+                   globaltime, numfallos, addr, ETQ, linea, palabra, bloque);
             printf("Cargando el bloque %02X en la linea %02X\n", bloque, linea);
-            time += 20;
+            globaltime += 20;
         }
 		
 		
@@ -80,7 +80,7 @@ int main() {
     // Estadisticas finales
     printf("Numero total de accesos: %u\n", numaccesos);
     printf("Numero de fallos: %u\n", numfallos);
-    printf("Tiempo medio de acceso: %.2f\n", (double)time / numaccesos);
+    printf("Tiempo medio de acceso: %.2f\n", (double)globaltime / numaccesos);
     printf("Texto leido: %s\n", texto);
     // Guardar el contenido final de la cache en un archivo
     VolcarCACHE(cache);
